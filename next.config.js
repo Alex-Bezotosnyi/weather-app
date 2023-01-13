@@ -1,11 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true
-}
-
-module.exports = {
+  reactStrictMode: true,
   images: {
-    loader: 'akamai',
-    path: ''
+    domains: ['cdn-icons-png.flaticon.com']
   }
-}
+};
+
+module.exports = nextConfig

@@ -7,17 +7,17 @@ const Forecast = ({ data }: PropsType): JSX.Element => {
     const [bg, setBg] = useState<string>('')
     const getWeather = data.weather[0].main
 
-    useEffect((): void => {
+    useEffect(() => {
       if (getWeather === 'Clouds') {
-        setBg('/assets/cloudy.png')
+        setBg('https://cdn-icons-png.flaticon.com/512/3222/3222801.png')
       } else if (getWeather === 'Clear') {
-        setBg('/assets/sunny.png')
+        setBg('https://cdn-icons-png.flaticon.com/512/3222/3222675.png')
       } else if (getWeather === 'Snow') {
-        setBg('/assets/snowy.png')
+        setBg('https://cdn-icons-png.flaticon.com/512/3222/3222717.png')
       } else if (getWeather === 'Rain') {
-        setBg('/assets/rainy.png')
+        setBg('https://cdn-icons-png.flaticon.com/512/3222/3222681.png')
       } else {
-        setBg('/assets/moon.png')
+        setBg('https://cdn-icons-png.flaticon.com/512/3222/3222723.png')
       }
     }, [data.weather[0].main])
     return bg
@@ -27,9 +27,9 @@ const Forecast = ({ data }: PropsType): JSX.Element => {
         <div className="max-w-[1240px] mx-4 grid grid-cols gap-8">
             <div
                 className="grid grid-cols-2 bg-gradient-to-br from-[#bcc06b80] via-[#0093E910] to-[#0093E970] bg-opacity-0 p-4 bg-gray-200 bg-opacity-20 rounded-lg divide-x divide-gray-300 shadow-sm shadow-gray-400">
-                <div className="flex flex-col relative justify-center items-center p-2 mx-6 gap-2">
+                <div className="flex flex-col justify-center items-center p-2 mx-6 gap-2">
                     <Image src={getBg()} alt="Weather"
-                           className="rounded-md opacity-80"
+                           className="rounded-md opacity-80 object-contain"
                            width={100}
                            height={100}
                     />

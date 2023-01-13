@@ -8,7 +8,7 @@ const Weather = (): JSX.Element => {
   const [loading, setLoading] = useState<boolean>(false)
 
   const KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY
-  const URL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&exclude=daily&units=metric&APPID=${KEY}`
+  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&exclude=daily&units=metric&APPID=${KEY}`
 
   const onInput = (event: ChangeEvent<HTMLInputElement>): void => {
     event.preventDefault()
