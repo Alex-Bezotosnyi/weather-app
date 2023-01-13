@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply w-full h-[100vh] bg-gradient-to-br from-[#0093E9] to-[#80D0C7] text-gray-100
+}
