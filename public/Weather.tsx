@@ -4,7 +4,7 @@ import { BsSearch } from 'react-icons/bs'
 
 const Weather = (): JSX.Element => {
   const [city, setCity] = useState<string>('')
-  const [weather, setWeather] = useState<{}>({})
+  const [weather, setWeather] = useState<any>({})
   const [loading, setLoading] = useState<boolean>(false)
 
   const KEY: string = process.env.NEXT_PUBLIC_WEATHER_API_KEY
@@ -28,6 +28,8 @@ const Weather = (): JSX.Element => {
     setLoading(false)
     setCity('')
   }
+
+  console.log(typeof weather.main)
 
   if (loading) {
     return null

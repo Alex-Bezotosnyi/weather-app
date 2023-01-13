@@ -8,7 +8,7 @@ export interface PropsType {
       country: string
     }
     weather: [{
-      main: string
+      [main: string]: any
       icon: string
     }]
   }
