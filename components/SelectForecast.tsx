@@ -45,7 +45,8 @@ const SelectForecast = (): JSX.Element => {
         sunrise: res.data.sys.sunrise,
         sunset: res.data.sys.sunset,
         visibility: res.data.visibility,
-        weather: res.data.weather[0].main
+        weather: res.data.weather[0].main,
+        wind_speed: res.data.wind.speed
       }
       setFetchedData(dispatchedData)
     }).catch(Error)
