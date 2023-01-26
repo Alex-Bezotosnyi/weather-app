@@ -8,7 +8,7 @@
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "project": ["tsconfig.json"],
+        "project": ["tsconfig.json", "next.config.js", "tailwind.config.js"],
         "sourceType": "module"
     },
     "rules": {

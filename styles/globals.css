@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    @apply h-full;
+}
+
+div#__next {
+    @apply h-full;
+}
+main {
+    @apply h-full;
+}
+
 body {
-    @apply w-full h-[100vh] bg-gradient-to-br from-[#0093E9] to-[#80D0C7] text-gray-100
+    @apply w-full h-full bg-[#ffffff] text-gray-100
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-bold
+}
+
+h1 {
+    @apply text-6xl sm:text-5xl md:text-6xl;
+}
+
+h2 {
+    @apply text-3xl sm:text-4xl;
+}
+
+h3 {
+    @apply text-2xl sm:text-3xl;
+}
+
+h4 {
+    @apply text-xl sm:text-2xl;
+}
+
+p {
+    @apply text-sm sm:text-xl;
 }
