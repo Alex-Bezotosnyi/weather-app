@@ -9,7 +9,7 @@ const SelectForecast = (): JSX.Element => {
   const [fetchedData, setFetchedData] = useState<{}>({})
   const [options, setOptions] = useState<[]>([])
 
-  const KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY
+  const KEY: string = process.env.NEXT_PUBLIC_WEATHER_API_KEY as string
   const URL_CITY = `https://api.openweathermap.org/data/2.5/weather?q=${city}&exclude=daily&units=metric&APPID=${KEY}`
 
   const getSearchOptions = async (value: string): Promise<void> => {

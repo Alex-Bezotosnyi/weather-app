@@ -15,7 +15,7 @@ const GetForecast = ({ fetchedSelectedData }: any): JSX.Element => {
   const [fetchedDailyData, setFetchedDailyData] = useState<[]>([])
   const [loading, setLoading] = useState<boolean>(false)
 
-  const KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY
+  const KEY: string = process.env.NEXT_PUBLIC_WEATHER_API_KEY as string
 
   useEffect(() => {
     fetchForecast(fetchedSelectedData)
@@ -34,6 +34,7 @@ const GetForecast = ({ fetchedSelectedData }: any): JSX.Element => {
         const latitude = Math.floor(position.coords.latitude * 100) / 100
         const longitude = Math.floor(position.coords.longitude * 100) / 100
 
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         const URL_COORDS = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${KEY}`
         axios.get(URL_COORDS).then(res => {
           setFetchedData(res.data)
